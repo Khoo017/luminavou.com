@@ -44,7 +44,7 @@ export default function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/blog" element={<BlogIndexPage />} />
-            <Route path="/blog/:id" element={<BlogPostPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/admin/blog" element={<AdminBlogPage />} />
             <Route path="/auth/callback" element={<AuthCallbackPage />} />
             <Route path="/learn-the-math" element={<LearnTheMath />} />

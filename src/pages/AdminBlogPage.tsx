@@ -107,6 +107,7 @@ function PostEditor({ post, onClose }: { post: BlogPost | null; onClose: () => v
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState('');
   const [uploading, setUploading] = useState(false);
+  const [uploadingContentImg, setUploadingContentImg] = useState(false);
   const [slugTouched, setSlugTouched] = useState(false);
 
   // Auto-generate slug from title when creating a new post
@@ -132,6 +133,25 @@ function PostEditor({ post, onClose }: { post: BlogPost | null; onClose: () => v
       setErr(e instanceof Error ? e.message : 'Upload failed');
     } finally {
       setUploading(false);
+    }
+  };
+
+  const onUploadContentImage = async (file: File) => {
+    setUploadingContentImg(true);
+    setErr('');
+    try {
+      const ext = file.name.split('.').pop() ?? 'jpg';
+      const path = `content_${crypto.randomUUID()}.${ext}`;
+      const { error: upErr } = await supabase.storage
+        .from('blog-images')
+        .upload(path, file, { cacheControl: '3600', upsert: false });
+      if (upErr) throw upErr;
+      const { data } = supabase.storage.from('blog-images').getPublicUrl(path);
+      setContent((prev) => prev + `\n\n![Image](${data.publicUrl})\n\n`);
+    } catch (e) {
+      setErr(e instanceof Error ? e.message : 'Content image upload failed');
+    } finally {
+      setUploadingContentImg(false);
     }
   };
 
@@ -250,8 +270,24 @@ function PostEditor({ post, onClose }: { post: BlogPost | null; onClose: () => v
         )}
       </label>
 
-      <label style={fieldLabel}>
-        Content (markdown)
+      <div style={{ ...fieldLabel, marginBottom: '1rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <span>Content (markdown)</span>
+          <label style={{ fontSize: '0.8rem', cursor: 'pointer', background: '#e8ddd0', padding: '0.2rem 0.5rem', borderRadius: '4px', color: '#1a1a1a', fontWeight: 500 }}>
+            {uploadingContentImg ? 'Uploading...' : 'Insert Image'}
+            <input
+              type="file"
+              accept="image/*"
+              style={{ display: 'none' }}
+              disabled={uploadingContentImg}
+              onChange={(e) => {
+                const f = e.target.files?.[0];
+                if (f) onUploadContentImage(f);
+                e.target.value = '';
+              }}
+            />
+          </label>
+        </div>
         <textarea
           value={content}
           onChange={(e) => setContent(e.target.value)}
@@ -259,7 +295,7 @@ function PostEditor({ post, onClose }: { post: BlogPost | null; onClose: () => v
           rows={20}
           style={{ ...input, resize: 'vertical', fontFamily: 'monospace' }}
         />
-      </label>
+      </div>
 
       <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', margin: '1rem 0' }}>
         <input
