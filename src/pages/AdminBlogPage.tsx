@@ -9,6 +9,7 @@ function slugify(s: string): string {
     .trim()
     .replace(/[^\w\s-]/g, '')
     .replace(/[\s_]+/g, '-')
+    .replace(/-+/g, '-')
     .replace(/^-+|-+$/g, '')
     .slice(0, 80);
 }
@@ -106,13 +107,14 @@ function PostEditor({ post, onClose }: { post: BlogPost | null; onClose: () => v
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState('');
   const [uploading, setUploading] = useState(false);
+  const [slugTouched, setSlugTouched] = useState(false);
 
   // Auto-generate slug from title when creating a new post
   useEffect(() => {
-    if (!post && title && !slug) {
+    if (!post && !slugTouched) {
       setSlug(slugify(title));
     }
-  }, [title, slug, post]);
+  }, [title, post, slugTouched]);
 
   const onUpload = async (file: File) => {
     setUploading(true);
@@ -199,7 +201,15 @@ function PostEditor({ post, onClose }: { post: BlogPost | null; onClose: () => v
 
       <label style={fieldLabel}>
         Slug (URL)
-        <input value={slug} onChange={(e) => setSlug(e.target.value)} required style={input} />
+        <input 
+          value={slug} 
+          onChange={(e) => {
+            setSlug(e.target.value);
+            setSlugTouched(true);
+          }} 
+          required 
+          style={input} 
+        />
       </label>
 
       <label style={fieldLabel}>

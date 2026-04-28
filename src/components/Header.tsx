@@ -12,6 +12,7 @@ const NAV = [
   { to: "/sustainability", label: "Sustainability" },
   { to: "/our-impact", label: "Our Impact" },
   { to: "/about", label: "About" },
+  { to: "/blog", label: "Stories" },
 ];
 
 export function Header() {
@@ -96,7 +97,11 @@ export function Header() {
               key={item.to}
               to={item.to}
               className={cn("nav-link", overDarkHero && "nav-link--light")}
-              data-active={location.pathname === item.to ? "true" : undefined}
+              data-active={
+                item.to === "/blog"
+                  ? location.pathname.startsWith("/blog") ? "true" : undefined
+                  : location.pathname === item.to ? "true" : undefined
+              }
             >
               {item.label}
             </NavLink>
