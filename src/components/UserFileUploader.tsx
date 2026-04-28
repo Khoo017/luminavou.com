@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { supabase } from '../lib/supabase';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -15,6 +15,8 @@ export function UserFileUploader() {
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
+  const [isDragging, setIsDragging] = useState(false);
+  const dragCounter = useRef(0);
 
   const refresh = async () => {
     if (!user) return;
@@ -70,6 +72,40 @@ export function UserFileUploader() {
     }
   };
 
+  const handleDragEnter = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current += 1;
+    if (e.dataTransfer.items && e.dataTransfer.items.length > 0) {
+      setIsDragging(true);
+    }
+  };
+
+  const handleDragLeave = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dragCounter.current -= 1;
+    if (dragCounter.current === 0) {
+      setIsDragging(false);
+    }
+  };
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragging(false);
+    dragCounter.current = 0;
+    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+      onUpload(e.dataTransfer.files);
+      e.dataTransfer.clearData();
+    }
+  };
+
   const onDownload = async (entry: FileEntry) => {
     // Files are private — generate a signed URL valid for 60 seconds
     const { data, error } = await supabase.storage
@@ -107,15 +143,20 @@ export function UserFileUploader() {
       <h2 style={{ fontSize: '1.5rem', margin: '0 0 1rem' }}>Your files</h2>
 
       <label
+        onDragEnter={handleDragEnter}
+        onDragLeave={handleDragLeave}
+        onDragOver={handleDragOver}
+        onDrop={handleDrop}
         style={{
           display: 'block',
           padding: '1.5rem',
-          border: '2px dashed #d8cdbe',
+          border: `2px dashed ${isDragging ? '#b08d6a' : '#d8cdbe'}`,
           borderRadius: 12,
-          background: '#faf1e8',
+          background: isDragging ? '#f4e9db' : '#faf1e8',
           textAlign: 'center',
           cursor: 'pointer',
           marginBottom: '1.5rem',
+          transition: 'all 0.2s ease-in-out',
         }}
       >
         <input
@@ -128,7 +169,7 @@ export function UserFileUploader() {
             e.target.value = '';
           }}
         />
-        {busy ? 'Uploading…' : 'Click to upload (or drag files here)'}
+        {busy ? 'Uploading…' : (isDragging ? 'Drop files here' : 'Click to upload (or drag files here)')}
       </label>
 
       {error && (
