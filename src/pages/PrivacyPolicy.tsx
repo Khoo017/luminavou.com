@@ -1,5 +1,4 @@
 import { PageHeader } from '@/components/PageHeader';
-import { Reveal } from '@/components/Reveal';
 
 export default function PrivacyPolicy() {
   return (
@@ -11,8 +10,7 @@ export default function PrivacyPolicy() {
       />
 
       <main className="flex-1 w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <Reveal>
-          <article className="prose prose-stone max-w-none">
+        <article className="prose prose-stone max-w-none">
 
             <p className="text-sm text-stone-500">
               <strong>Last updated:</strong> 28 April 2026
@@ -198,7 +196,6 @@ export default function PrivacyPolicy() {
             </p>
 
           </article>
-        </Reveal>
       </main>
     </div>
   );
