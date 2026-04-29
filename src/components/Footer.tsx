@@ -99,9 +99,8 @@ export function Footer() {
               </ul>
             </div>
             <div className="col-span-2 sm:col-span-1">
-              <p className="eyebrow text-canvas/55">Office</p>
+              <p className="eyebrow text-canvas/55">Contact</p>
               <address className="mt-4 not-italic text-sm leading-relaxed text-canvas/70">
-                Suva, Fiji<br />
                 bula@luminavou.com<br />
                 +679 241 3038
               </address>

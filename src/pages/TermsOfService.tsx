@@ -27,8 +27,7 @@ export default function TermsOfService() {
 
             <h2>1. Who we are</h2>
             <p>
-              "Lumina Vou", "we", "us" and "our" means Lumina Vou, a company registered in Fiji
-              with our office in Suva. The website is{' '}
+              "Lumina Vou", "we", "us" and "our" means Lumina Vou, a company registered in Fiji. The website is{' '}
               <a href="https://luminavou.com">luminavou.com</a>.
             </p>
 
@@ -165,7 +164,7 @@ export default function TermsOfService() {
             </p>
             <p>
               Lumina Vou<br />
-              Suva, Fiji<br />
+              Fiji<br />
               <a href="mailto:bula@luminavou.com">bula@luminavou.com</a>
             </p>
 

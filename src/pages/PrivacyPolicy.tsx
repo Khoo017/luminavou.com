@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
 
             <h2>The short version</h2>
             <p>
-              Lumina Vou is a solar engineering company based in Suva, Fiji. To run our website
+              Lumina Vou is a solar engineering company based in Fiji. To run our website
               and serve you well, we collect a small amount of personal information — your name,
               email, and any messages you send us. If you create an account, we also store any
               files you upload privately. We don't sell your data, we don't share it for
@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
             <h2>1. Who we are</h2>
             <p>
               In this policy, "Lumina Vou", "we", "us" and "our" refers to Lumina Vou, a company
-              registered in Fiji and based in Suva. Our website is{' '}
+              registered in Fiji. Our website is{' '}
               <a href="https://luminavou.com">luminavou.com</a>.
             </p>
 
@@ -191,7 +191,7 @@ export default function PrivacyPolicy() {
             </p>
             <p>
               Lumina Vou<br />
-              Suva, Fiji<br />
+              Fiji<br />
               <a href="mailto:bula@luminavou.com">bula@luminavou.com</a>
             </p>
 

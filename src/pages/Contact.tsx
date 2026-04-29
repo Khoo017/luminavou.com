@@ -1,4 +1,4 @@
-import { MapPin, Mail, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
 import { Reveal } from "@/components/Reveal";
 import { cn } from "@/lib/utils";
@@ -26,15 +26,6 @@ export default function Contact() {
               </p>
 
               <ul className="mt-8 flex flex-col gap-6 text-sm">
-                <li className="flex gap-4">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sun/10 text-sun">
-                    <MapPin size={16} />
-                  </span>
-                  <div>
-                    <p className="font-medium text-earth-700">Office</p>
-                    <p className="text-earth/70">Suva, Central, Fiji</p>
-                  </div>
-                </li>
                 <li className="flex gap-4">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sun/10 text-sun">
                     <Mail size={16} />
