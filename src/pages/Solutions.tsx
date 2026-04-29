@@ -48,7 +48,7 @@ const SOLUTIONS = [
 
 const PROCESS = [
   { icon: Sun, title: "Site visit", body: "Free. We come to your roof, measure properly, and ask to see your last twelve months of power bills. Real numbers in, real proposal out." },
-  { icon: Wrench, title: "Custom design", body: "Your house, your usage, your budget. We don't do catalogue installs. The system that fits your sister-in-law's place isn't the system that fits yours." },
+  { icon: Wrench, title: "Plan & design", body: "Your house, your usage, your budget. Every install is different. The system that fits your sister-in-law's place isn't the system that fits yours." },
   { icon: ShieldCheck, title: "Install & sign-off", body: "4–7 days on site, depending on size. Certified Fijian electricians sign off every job. Twenty-five-year performance promise that we'll actually honour, because we still live here." },
 ];
 
