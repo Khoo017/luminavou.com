@@ -8,54 +8,57 @@ const SOLUTIONS = [
   {
     id: "tiles",
     icon: Grid3x3,
-    title: "Integrated Solar Tiles",
-    body: "Architectural-grade photovoltaic tiles that blend with traditional roofing. Engineered for cyclone-rated wind loads, salt spray, and the realities of Pacific weather.",
+    title: "Solar that reads as roof from the road.",
+    body: "Photovoltaic tiles that generate electricity but look like traditional Pacific roofing from street level. Engineered for the wind loads, salt corrosion, and humidity that Fiji actually delivers — not the lab-test versions of those things.",
     points: [
       "BIPV tiles indistinguishable at street level",
-      "Cat-5 wind certified, IP68 rated",
+      "Cat-5 wind certified, IP68 rated against water and dust",
       "25-year output warranty",
+      "No more \"is that a solar panel?\" from your neighbours",
     ],
     image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80",
   },
   {
     id: "storage",
     icon: Battery,
-    title: "Lumina ONE Storage",
-    body: "Our flagship system: a 6.2 kWh hybrid inverter married to modular LiFePO4 batteries, with an automatic activation circuit and a 120 A MPPT controller built in. Engineered for Fijian conditions — anti-dust kit standard.",
+    title: "The grid drops. You don't notice.",
+    body: "Our flagship: a 6.2 kWh hybrid inverter married to modular LiFePO₄ batteries, with automatic activation and a 120 A MPPT controller built in. Engineered for Fijian conditions — anti-dust kit standard. The kind of system where the first time you'll know the grid went out is when someone tells you.",
     points: [
-      "5.12 kWh and 10.24 kWh modular batteries",
+      "5.12 kWh and 10.24 kWh modular battery options",
       "Automatic outage activation, runs without battery if needed",
       "WiFi & GPRS monitoring (iOS / Android)",
+      "Quiet enough you'll forget it's there",
     ],
     image: "/products/lumina-one-unit.jpg",
   },
   {
     id: "insights",
     icon: LineChart,
-    title: "Real-time Insights",
-    body: "Production, consumption, savings — all visible to the minute on your phone. We build the dashboard, you watch the meter run backwards.",
+    title: "Watch your meter run backwards, on your phone.",
+    body: "Production, consumption, savings — visible to the minute on your phone. We build the dashboard. You watch the numbers do what they're supposed to do. Most of our customers check it religiously for two weeks, then forget — which is the point. The system is supposed to be boring.",
     points: [
       "Per-circuit monitoring",
       "Anomaly alerts for failing appliances",
       "Carbon and FJD savings tracker",
+      "Quietly tells you if a panel underperforms before you'd notice",
     ],
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=80",
   },
 ];
 
 const PROCESS = [
-  { icon: Sun, title: "Site Assessment", body: "Free engineering visit. We measure roof orientation, shading, and your last 12 months of bills." },
-  { icon: Wrench, title: "Custom Design", body: "A specification tuned to your building, your usage, and your budget. No catalogue installs." },
-  { icon: ShieldCheck, title: "Install & Activate", body: "Certified crews, 4–7 days on site, and a 25-year performance promise that we honour locally." },
+  { icon: Sun, title: "Site visit", body: "Free. We come to your roof, measure properly, and ask to see your last twelve months of power bills. Real numbers in, real proposal out." },
+  { icon: Wrench, title: "Custom design", body: "Your house, your usage, your budget. We don't do catalogue installs. The system that fits your sister-in-law's place isn't the system that fits yours." },
+  { icon: ShieldCheck, title: "Install & sign-off", body: "4–7 days on site, depending on size. Certified Fijian electricians sign off every job. Twenty-five-year performance promise that we'll actually honour, because we still live here." },
 ];
 
 export default function Solutions() {
   return (
     <>
       <PageHeader
-        eyebrow="Solutions"
-        title="Solar systems engineered for tropical resilience."
-        intro="Three product lines built around one philosophy: power that's quiet, beautiful, and built to outlive the next cyclone. Anchored by our flagship all-in-one system, the Lumina ONE."
+        eyebrow="What we install"
+        title="Solar, sized for your roof — not someone else's catalogue."
+        intro="Three product lines, one philosophy: power that's quiet, properly fitted, and built to outlive the next cyclone. Anchored by our flagship Lumina ONE — solar, battery, and inverter, designed to live together."
       />
 
       {/* Solution detail blocks */}
@@ -95,7 +98,7 @@ export default function Solutions() {
                   </ul>
                   <Button asChild variant="outline" size="md" className="mt-8">
                     <Link to="/contact">
-                      Talk to an engineer <ArrowRight size={14} />
+                      Talk to our team <ArrowRight size={14} />
                     </Link>
                   </Button>
                 </div>
@@ -118,15 +121,13 @@ export default function Solutions() {
               <span className="inline-flex items-center rounded-full bg-sun px-3 py-1 text-[0.65rem] font-medium uppercase tracking-[0.18em] text-canvas">
                 New
               </span>
-              <p className="eyebrow">The Lumina ONE</p>
+              <p className="eyebrow">New — the Lumina ONE</p>
             </div>
             <h2 className="mt-5 max-w-3xl text-display-lg font-semibold text-balance">
-              Solar, battery, and inverter — designed to live together.
+              Solar, battery, and inverter — built to live together.
             </h2>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-earth/75 text-pretty">
-              An all-in-one energy generation and storage system that integrates a powerful hybrid inverter
-              with modular LiFePO4 battery storage and high-power solar panels. Two configurations,
-              everything included, transparent pricing.
+              Our flagship system. An all-in-one energy generation and storage system — a powerful hybrid inverter, modular LiFePO₄ battery storage, and high-output solar panels, all engineered to talk to each other. Two configurations, everything included, transparent pricing.
             </p>
           </Reveal>
 
@@ -234,9 +235,9 @@ export default function Solutions() {
         </div>
         <div className="container relative py-24 lg:py-28">
           <Reveal>
-            <p className="eyebrow text-canvas/60">From bill to backwards meter</p>
+            <p className="eyebrow text-canvas/60">How we work</p>
             <h2 className="mt-4 max-w-2xl text-display-lg font-semibold text-balance">
-              Three steps. No hard sell.
+              Three steps. No surprises.
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-8 md:grid-cols-3">
@@ -255,7 +256,7 @@ export default function Solutions() {
             <div className="mt-14 flex justify-center">
               <Button asChild variant="primary" size="lg">
                 <Link to="/contact">
-                  Book a site assessment <ArrowRight size={16} />
+                  Book a site visit <ArrowRight size={16} />
                 </Link>
               </Button>
             </div>

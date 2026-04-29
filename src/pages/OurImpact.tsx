@@ -6,31 +6,31 @@ import { Button } from "@/components/ui/button";
 
 const PROJECTS = [
   {
-    name: "Denarau Coastal Villa",
+    name: "A Denarau coastal home.",
     type: "Residential",
     capacity: "18 kW",
     storage: "27 kWh",
     saving: "98% bill reduction",
     image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1400&q=80",
-    blurb: "A four-bedroom oceanfront home running entirely on stored sun. The owner reports two FJD 14 power bills since switchover.",
+    blurb: "A four-bedroom oceanfront home running entirely on stored sun. The owner's last two power bills since switchover have been FJD 14 — and that was the standing charge, not the energy.",
   },
   {
-    name: "Viti EcoResort — North Wing",
+    name: "A north-coast eco-resort.",
     type: "Hospitality",
     capacity: "120 kW",
     storage: "200 kWh",
     saving: "FJD 240k / year",
     image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1400&q=80",
-    blurb: "Forty guest rooms, three pools, and an ocean-view spa — fully solar-driven. Diesel generator now reserved for cyclone events only.",
+    blurb: "Forty guest rooms, three pools, an ocean-view spa — fully solar-driven. The diesel generator is still on site but it's now a cyclone backup, not a daily expense. Guests pay for an experience that's quiet in every sense.",
   },
   {
-    name: "Suva Tech Headquarters",
+    name: "A Suva tech headquarters.",
     type: "Commercial",
     capacity: "85 kW",
     storage: "60 kWh",
     saving: "78% grid offset",
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80",
-    blurb: "A working office full of servers, AC, and engineers. We rewrote their load profile and put solar where it actually pays.",
+    blurb: "A working office: servers, AC, engineers. We rewrote their load profile and put solar where it actually pays. They didn't want a green sticker — they wanted a CapEx that paid back in five years. They got it.",
   },
 ];
 
@@ -40,7 +40,7 @@ export default function OurImpact() {
       <PageHeader
         eyebrow="Our impact"
         title="Watch the meter run backwards."
-        intro="Every Lumina Vou system is a real building, with real bills, in real Pacific weather. Here are three of the homes and businesses we've helped become their own utility."
+        intro="Every Lumina Vou system is a real building, with real bills, in real Pacific weather. Here are three of the kinds of homes and businesses we help become their own utility. (Names withheld for privacy — happy to connect serious enquiries with reference customers.)"
       />
 
       <section className="container py-20 lg:py-28">

@@ -36,7 +36,7 @@ export function Footer() {
           <div className="md:col-span-5">
             <Logo variant="allCream" />
             <p className="mt-6 max-w-md text-sm leading-relaxed text-canvas/70">
-              Premium solar engineering for the Pacific. We design intelligent power systems for homes,
+              Locally founded, locally installed, locally accountable. We design solar systems for homes,
               resorts, and businesses ready to retire the grid.
             </p>
             <div className="mt-8 flex items-center gap-3">
@@ -121,7 +121,7 @@ export function Footer() {
             &nbsp;&nbsp;·&nbsp;&nbsp;
             <Link to="/contact" className="hover:text-canvas transition-colors">Contact</Link>
           </p>
-          <p>© {year} Lumina Vou. Leading Fiji's clean-energy transition.</p>
+          <p>A Fijian solar company. © {year} Lumina Vou.</p>
         </div>
       </div>
     </footer>

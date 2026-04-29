@@ -15,7 +15,7 @@ export default function ImpactReport() {
   return (
     <>
       <PageHeader
-        eyebrow="2024 Impact Report"
+        eyebrow="2026 Impact Report"
         title="Every kilowatt-hour, on the record."
         intro="Real solar companies show their math. Here are the numbers behind every install we've completed since founding — without selective rounding."
       />
@@ -52,9 +52,11 @@ export default function ImpactReport() {
               </ul>
 
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-                <Button variant="primary" size="lg" onClick={() => alert("PDF download — wire this up to your Odoo media file or a CDN URL.")}>
-                  <Download size={16} />
-                  Download the 2024 report
+                <Button asChild variant="primary" size="lg">
+                  <a href="/Lumina_Vou_Impact_Report.pdf" download="Lumina_Vou_Impact_Report.pdf" target="_blank" rel="noopener noreferrer">
+                    <Download size={16} />
+                    Download the 2026 report
+                  </a>
                 </Button>
                 <Button asChild variant="outline" size="lg">
                   <Link to="/sustainability">Read our commitments</Link>
@@ -71,10 +73,10 @@ export default function ImpactReport() {
                   <FileText size={32} className="text-electric" strokeWidth={1.25} />
                   <p className="eyebrow mt-4 text-canvas/55">Document</p>
                   <h3 className="mt-2 font-display text-2xl font-semibold text-canvas">
-                    Lumina Vou — 2024 Annual Impact
+                    Lumina Vou — 2026 Annual Impact
                   </h3>
                   <p className="mt-3 text-sm text-canvas/70">
-                    36 pages · PDF · Released March 2025
+                    36 pages · PDF · Released April 2026
                   </p>
                 </div>
               </div>

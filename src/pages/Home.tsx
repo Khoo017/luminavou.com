@@ -54,7 +54,7 @@ export default function Home() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="eyebrow text-canvas/70"
           >
-            Solar engineered for the Pacific
+            Solar, properly done. Built for here.
           </motion.p>
 
           <motion.h1
@@ -63,7 +63,7 @@ export default function Home() {
             transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="mt-6 max-w-4xl text-display-xl font-semibold text-balance text-canvas"
           >
-            Reclaiming Earth's Power
+            When the grid goes down, your freezer doesn't.
           </motion.h1>
 
           <motion.p
@@ -72,8 +72,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="mt-6 max-w-xl text-base leading-relaxed text-canvas/85 text-pretty"
           >
-            Premium solar solutions designed for tropical resilience. Elevate your property's value
-            while achieving complete energy independence with Lumina Vou.
+            Lumina Vou is a Fijian solar company started by people who got tired of throwing out a week of food every cyclone season. We design, install, and stand behind power systems that keep your lights on after big electrical's already given up for the night.
           </motion.p>
 
           <motion.div
@@ -84,11 +83,11 @@ export default function Home() {
           >
             <Button asChild size="lg" variant="primary">
               <Link to="/contact">
-                Get a Free Consultation <ArrowRight size={16} />
+                Book a site visit <ArrowRight size={16} />
               </Link>
             </Button>
             <Button asChild size="lg" variant="outlineLight">
-              <Link to="/solutions">Explore Technology</Link>
+              <Link to="/solutions">See how it works</Link>
             </Button>
           </motion.div>
 
@@ -106,7 +105,7 @@ export default function Home() {
 
       {/* TRUSTED BY — marquee */}
       <section className="border-y border-earth/10 bg-canvas py-10">
-        <p className="eyebrow text-center">Trusted by local visionaries</p>
+        <p className="eyebrow text-center">Trusted by neighbours across Viti Levu</p>
         <div className="mt-6 mask-fade-x overflow-hidden">
           <div className="flex w-max animate-marquee gap-16 px-8 whitespace-nowrap">
             {[...PARTNERS, ...PARTNERS].map((p, i) => (
@@ -125,17 +124,17 @@ export default function Home() {
       <section className="container py-24 lg:py-32">
         <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
           <Reveal className="lg:col-span-5">
-            <p className="eyebrow">Our approach</p>
+            <p className="eyebrow">What we do</p>
             <h2 className="mt-4 text-display-lg font-semibold text-balance">
-              Intelligent infrastructure for modern living.
+              Solar that's quiet, properly fitted, and still on at 3am.
             </h2>
           </Reveal>
           <Reveal delay={0.1} className="lg:col-span-6 lg:col-start-7">
             <p className="text-base leading-relaxed text-earth/75 text-pretty">
-              We integrate cutting-edge solar technology seamlessly into your architecture,
-              prioritizing aesthetics without compromising efficiency. Every panel, battery and
-              inverter is specified by engineers — not salespeople — with the climate, the building,
-              and the lifestyle in mind.
+              We don't sell panels. We sell mornings where you don't notice the grid went out. We design the whole system — panels, batteries, inverter, monitoring — around your roof, your bills, and the kind of weather Fiji actually has. Then we install it ourselves, sign it off with a certified Fijian electrician, and pick up the phone when something needs attention.
+            </p>
+            <p className="mt-6 text-base leading-relaxed text-earth/75 text-pretty">
+              Big electrical sells you electricity by the kilowatt-hour. We sell you the morning you stop checking the meter.
             </p>
             <Link
               to="/solutions"
@@ -153,8 +152,8 @@ export default function Home() {
             <FeatureCard
               variant="image"
               icon={<Grid3x3 size={18} />}
-              title="Integrated Solar Tiles"
-              body="Invisible power generation. Our tiles mimic traditional roofing materials while capturing maximum solar energy."
+              title="Power that doesn't change how your roof looks."
+              body="Tiles that generate electricity but read as roofing from the street. Cyclone-rated, salt-tested, dust-kit standard. Because you live in Fiji, and we do too."
               image="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80"
               to="/solutions#tiles"
             />
@@ -165,8 +164,8 @@ export default function Home() {
             <FeatureCard
               variant="gradient"
               icon={<Battery size={18} />}
-              title="Smart Storage"
-              body="Uninterrupted power during tropical storms with intelligent battery reserves."
+              title="The grid drops. Your house doesn't notice."
+              body="Modular LiFePO₄ batteries that take over the second the line dies. No flicker, no reboot, no scrambling for candles. You'll find out the grid went down when your neighbour calls to complain about it."
               to="/solutions#storage"
             />
           </Reveal>
@@ -176,8 +175,8 @@ export default function Home() {
             <FeatureCard
               variant="soft"
               icon={<LineChart size={18} />}
-              title="Real-time Insights"
-              body="Monitor your energy production and consumption down to the minute via our intuitive mobile app."
+              title="Watch every kilowatt, on your phone."
+              body="Production, consumption, what each appliance is drawing — all visible to the minute. Most of our customers check it every morning for the first two weeks. Then they forget about it, which is the point."
               to="/solutions#insights"
             />
           </Reveal>
@@ -186,12 +185,80 @@ export default function Home() {
           <Reveal delay={0.1} className="lg:col-span-8 lg:row-span-1">
             <FeatureCard
               variant="dark"
-              title="Grid Independence."
-              body="Take control of your energy future and protect yourself from rising utility costs with a completely autonomous system."
+              title="Your meter, running backwards."
+              body="When you're producing more than you use, you bank it. Some months, your bill is a credit. Most months, it's a number you set, not a number you hope for."
               cta="Learn the Math"
               to="/learn-the-math"
             />
           </Reveal>
+        </div>
+      </section>
+
+      {/* LUMINA ONE — Featured product callout (Teaser) */}
+      <section className="relative overflow-hidden bg-canvas-deep grain">
+        <div className="pointer-events-none absolute inset-0 -z-0">
+          <div className="absolute -top-32 right-0 h-80 w-[600px] bg-sun/8 blur-3xl" />
+          <div className="absolute bottom-0 left-1/4 h-60 w-[500px] bg-zap/10 blur-3xl" />
+        </div>
+
+        <div className="container relative py-20 lg:py-28">
+          <Reveal>
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center rounded-full bg-sun px-3 py-1 text-[0.65rem] font-medium uppercase tracking-[0.18em] text-canvas">
+                New
+              </span>
+              <p className="eyebrow">New — the Lumina ONE</p>
+            </div>
+            <h2 className="mt-5 max-w-3xl text-display-lg font-semibold text-balance">
+              Solar, battery, and inverter — built to live together.
+            </h2>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-earth/75 text-pretty">
+              Our flagship system. Hybrid inverter, modular battery storage, and high-output panels, all engineered to talk to each other. Two configurations, transparent pricing, free delivery on Viti Levu, full install or DIY-with-our-sign-off. The whole thing was specified by someone who's spent enough cyclones in the dark to know what matters.
+            </p>
+          </Reveal>
+
+          <div className="mt-14 grid gap-12 lg:grid-cols-12 lg:gap-16 items-center">
+            <Reveal className="lg:col-span-5">
+              <div className="overflow-hidden rounded-2xl bg-canvas shadow-lift p-8 md:p-12 flex items-center justify-center">
+                <img
+                  src="/products/lumina-one-unit.jpg"
+                  alt="The Lumina ONE — hybrid inverter with stacked LiFePO4 battery modules"
+                  className="w-full max-w-xs object-contain transition-transform duration-700 ease-out hover:scale-[1.03]"
+                  loading="lazy"
+                />
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.1} className="lg:col-span-7">
+              <ul className="grid grid-cols-1 gap-y-4 text-sm md:text-base text-earth/80">
+                {[
+                  "WiFi & GPRS monitoring (iOS / Android)",
+                  "Automatic battery activation — runs without battery if needed",
+                  "Anti-dust kit, standard. Because you live near a cane field.",
+                  "Built-in 120 A MPPT solar charger",
+                  "Smart battery charge optimisation",
+                  "5-year warranty, Suva-based support — we're ten minutes from your roof",
+                ].map((feat) => (
+                  <li key={feat} className="flex items-start gap-3">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-sun" />
+                    <span>{feat}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-10 flex flex-col sm:flex-row gap-3">
+                <Button asChild variant="primary" size="lg">
+                  <Link to="/contact">
+                    Get a Lumina ONE quote <ArrowRight size={16} />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <a href="/datasheets/lumina-one-datasheet.pdf" target="_blank" rel="noopener noreferrer">
+                    Download datasheet (PDF)
+                  </a>
+                </Button>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -234,10 +301,10 @@ export default function Home() {
 
         <div className="container relative py-20 lg:py-24 text-center">
           <Reveal>
-            <h2 className="text-display-lg font-semibold text-balance">Ready to harness the sun?</h2>
+            <p className="eyebrow text-canvas/60 mb-4">Ready when you are</p>
+            <h2 className="text-display-lg font-semibold text-balance">The sun's been free this whole time.</h2>
             <p className="mx-auto mt-5 max-w-xl text-canvas/75 text-pretty">
-              Schedule a complimentary site assessment with our engineering team to discover your
-              property's true potential.
+              Most homes pay for power they could be making themselves. The first conversation is free, takes about an hour, and ends with you knowing what your roof is worth.
             </p>
           </Reveal>
 
@@ -249,17 +316,17 @@ export default function Home() {
               <Input
                 type="email"
                 required
-                placeholder="Enter your email address"
+                placeholder="Your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="flex-1 bg-canvas/95 border-transparent placeholder:text-earth/45"
               />
               <Button type="submit" size="lg" variant="primary">
-                {submitted ? "Sent — we'll be in touch" : "Request Consultation"}
+                {submitted ? "Sent — we'll be in touch" : "Request a site visit"}
               </Button>
             </form>
             <p className="mt-4 text-xs tracking-wide text-canvas/55">
-              No commitment required. Local experts only.
+              No commitment. Local team. Real numbers.
             </p>
           </Reveal>
         </div>

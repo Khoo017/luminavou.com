@@ -7,23 +7,23 @@ import { Button } from "@/components/ui/button";
 const PILLARS = [
   {
     icon: Leaf,
-    title: "Tier-1 panels only",
-    body: "We specify only manufacturers with verified low-carbon production. No grey-market modules, no shortcuts.",
+    title: "Tier-1 panels only. No exceptions.",
+    body: "We only specify panels from manufacturers with verified low-carbon production. No grey-market modules, no \"we got a deal,\" no shortcuts. The cleanest panel on a roof is the one that didn't pollute on the way there.",
   },
   {
     icon: Recycle,
-    title: "Closed-loop end-of-life",
-    body: "Every panel and battery we install has a documented recycling pathway. We take them back at end-of-life — for free.",
+    title: "We take it back.",
+    body: "Every panel and battery we install has a documented recycling pathway. When it's done its 25 years, you call us, we collect it, we make sure it gets recycled — for free. Solar shouldn't end up in a landfill any more than diesel should.",
   },
   {
     icon: Users,
-    title: "Local hands, local skills",
-    body: "We employ and train Fijian engineers and electricians. Solar is a transition we'd rather build at home.",
+    title: "We hire here. We train here.",
+    body: "Every installer on our crew is Fijian. Every electrician signing off our work is Fijian-certified. Solar is a transition we'd rather build at home than import wholesale.",
   },
   {
     icon: Trees,
-    title: "Reef-positive",
-    body: "A percentage of every install funds Pacific reef restoration through our partnership with Coral Reef Alliance.",
+    title: "A percentage of every install funds the reef.",
+    body: "Through our partnership with the Coral Reef Alliance, every system we install funds Pacific reef restoration. Energy that was burning fossil fuels yesterday is now helping repair the coastline today. The math finally moves in the right direction.",
   },
 ];
 
@@ -32,8 +32,8 @@ export default function Sustainability() {
     <>
       <PageHeader
         eyebrow="Sustainability"
-        title="A solar company has to mean it."
-        intro="Energy that's clean at the meter but dirty in the supply chain isn't progress. Here's how we close the loop — from manufacturing to recycling to the reef."
+        title="A solar company should mean it."
+        intro="Energy that's clean at the meter but dirty in the supply chain isn't progress — it's a story you tell yourself. Here's how we close the loop, from where the panels are made all the way back to the reef."
       />
 
       <section className="container py-20 lg:py-28">
@@ -69,8 +69,7 @@ export default function Sustainability() {
         <Reveal>
           <div className="mt-16 flex flex-col items-center gap-4 text-center">
             <p className="max-w-xl text-sm text-earth/70">
-              Want the full numbers? Our annual Impact Report breaks down every install, every
-              kilowatt-hour, every kilogram of carbon.
+              Want the full numbers? Our annual Impact Report breaks down every install, every kilowatt-hour, every kilogram of carbon — with sources.
             </p>
             <Button asChild variant="primary" size="md">
               <Link to="/impact-report">Read the Impact Report</Link>
