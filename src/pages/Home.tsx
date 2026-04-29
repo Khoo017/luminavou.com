@@ -6,14 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Reveal } from "@/components/Reveal";
 import { useState } from "react";
 
-const PARTNERS = [
-  "Viti EcoResorts",
-  "Suva Tech",
-  "Pacific Green",
-  "Island Builders",
-  "Coral Capital",
-  "Vanua Hospitality",
-];
+
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -103,21 +96,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TRUSTED BY — marquee */}
+      {/* QUIET NOTE */}
       <section className="border-y border-earth/10 bg-canvas py-10">
-        <p className="eyebrow text-center">Trusted by neighbours across Viti Levu</p>
-        <div className="mt-6 mask-fade-x overflow-hidden">
-          <div className="flex w-max animate-marquee gap-16 px-8 whitespace-nowrap">
-            {[...PARTNERS, ...PARTNERS].map((p, i) => (
-              <span
-                key={`${p}-${i}`}
-                className="font-display text-xl text-earth/60 tracking-tight"
-              >
-                {p}
-              </span>
-            ))}
-          </div>
-        </div>
+        <p className="eyebrow text-center">A small Fijian solar company. New customers welcome.</p>
       </section>
 
       {/* INTELLIGENT INFRASTRUCTURE */}
