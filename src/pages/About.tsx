@@ -36,7 +36,7 @@ export default function About() {
           <Reveal className="lg:col-span-5">
             <div className="overflow-hidden rounded-2xl shadow-lift">
               <img
-                src="https://images.unsplash.com/photo-1559302995-ed1d2bc6cba1?auto=format&fit=crop&w=1200&q=80"
+                src="/team/suva-rooftop-engineers.png"
                 alt="Lumina Vou engineers on a Suva rooftop"
                 className="aspect-[4/5] w-full object-cover"
                 loading="lazy"
