@@ -29,7 +29,7 @@ const SOLUTIONS = [
       "WiFi & GPRS monitoring (iOS / Android)",
       "Quiet enough you'll forget it's there",
     ],
-    image: "/products/lumina-one-unit.jpg",
+    image: "/lifestyle/house-sunset-solar.png",
   },
   {
     id: "insights",
