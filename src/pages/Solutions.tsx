@@ -236,7 +236,7 @@ export default function Solutions() {
         <div className="container relative py-24 lg:py-28">
           <Reveal>
             <p className="eyebrow text-canvas/60">How we work</p>
-            <h2 className="mt-4 max-w-2xl text-display-lg font-semibold text-balance">
+            <h2 className="mt-4 max-w-2xl text-display-lg font-semibold text-balance text-canvas">
               Three steps. No surprises.
             </h2>
           </Reveal>

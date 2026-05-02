@@ -283,7 +283,7 @@ export default function Home() {
         <div className="container relative py-20 lg:py-24 text-center">
           <Reveal>
             <p className="eyebrow text-canvas/60 mb-4">Ready when you are</p>
-            <h2 className="text-display-lg font-semibold text-balance">The sun's been free this whole time.</h2>
+            <h2 className="text-display-lg font-semibold text-balance text-canvas">The sun's been free this whole time.</h2>
             <p className="mx-auto mt-5 max-w-xl text-canvas/75 text-pretty">
               Most homes pay for power they could be making themselves. The first conversation is free, takes about an hour, and ends with you knowing what your roof is worth.
             </p>
